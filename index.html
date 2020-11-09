@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Vue Slider</title>
+        <script src="https://kit.fontawesome.com/d573fb9cae.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -10,7 +11,18 @@
 
         <div id="root">
 
+            <div class="wrapper">
+                <div class="prev">
+                    <i @click="prev_image()" class="fas fa-arrow-left"></i>
+                </div>
 
+                <div class="slider">
+                    <img :src="immagini[current_index]">
+                </div>
+                <div class="next">
+                    <i @click="next_image()" class="fas fa-arrow-right"></i>
+                </div>
+            </div>
 
         </div>
 
