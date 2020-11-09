@@ -18,7 +18,7 @@ var app = new Vue({
         next_image(){
             this.current_index += 1;
             //Se l'index corrente è maggiore di 4 allora al prossimo click riparte dall'index 0
-            if (this.current_index == 4) {
+            if (this.current_index == this.immagini.length) {
                 this.current_index = 0;
             }
             //Se clicco invoco la funzione resetPlay()
@@ -29,7 +29,7 @@ var app = new Vue({
             this.current_index -= 1;
             //Se l'index corrente è minore di 0 allora al prossimo click riparte dall'index 3 (ovvero l'ultima immagine dell'array)
             if (this.current_index < 0) {
-                this.current_index = 3;
+                this.current_index = this.immagini.length - 1;
             }
             //Se clicco invoco la funzione resetPlay()
             this.resetPlay();
